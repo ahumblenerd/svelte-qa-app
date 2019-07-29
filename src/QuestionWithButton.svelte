@@ -6,26 +6,15 @@
       This app is strictly not following svelt reactivity pricincples. Need to update it.
     */
     export let question;
+    export let rightAnswer;
+    export let answers = [ ];
+    export let defaultResponseMessage;
     let selectedAnswer;
-    let rightAnswer = "peter_parker";
     let answerMessageStatus;
-    let responseMessage = "Choose an option";
     
-    let answers = [
-        {
-        id : 0,
-        value : "peter_parker"
-        },
-        {
-            id : 1,
-            value : "pepper_pots"
-        },
-        {
-            id : 2,
-            value : "arun_purushothaman"
-        }
-    ]
-
+    
+    
+  
     function _responseMessage(){
         if (answerMessageStatus === undefined){
           return "Choose an answer"
@@ -45,9 +34,9 @@
           }else{
               answerMessageStatus = false;
           }
-          console.log("choose an answer",selectedAnswer,answerMessageStatus);
-          responseMessage = _responseMessage();
-          console.log(responseMessage);
+          console.log("choose an answer",selectedAnswer,myAnswer,rightAnswer,answerMessageStatus);
+          defaultResponseMessage = _responseMessage();
+          console.log(defaultResponseMessage);
       } 
     }
 
@@ -74,7 +63,7 @@
             <select class="form-select" bind:value={selectedAnswer}>
                 <option value="-1">Choose an option</option>
                 {#each answers as answer}
-                    <option value={answer.id}>{answer.value}</option>
+                    <option value={answer.id}>{answer.value.split("_").join(" ")}</option>
                  {/each}   
             </select>
         </div>
@@ -82,6 +71,6 @@
   </div>
   <div class="card-footer">
   <button class="btn btn-primary" on:click={verifyAnswer} >Verify</button>
-   <span>{responseMessage}</span> 
+   <span>{defaultResponseMessage}</span> 
   </div>  
 </div>
