@@ -1,5 +1,10 @@
 <script>
 
+
+    /*
+
+      This app is strictly not following svelt reactivity pricincples. Need to update it.
+    */
     export let question;
     let selectedAnswer;
     let rightAnswer = "peter_parker";

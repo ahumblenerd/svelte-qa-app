@@ -1,7 +1,7 @@
 <script>
 	import QA from './QA.svelte';
 	import Header from './Header.svelte';
-	import Question from './Question.svelte';
+	import QuestionWithButton from './QuestionWithButton.svelte';
 
 	let links = [{
 		url : "http://www.google.com",
@@ -29,7 +29,7 @@
 <div class="container grid-lg">
 	<div class="row">
 	<div class="column col-6 cardPadding p-centered">
-		<Question question={question}></Question>
+		<QuestionWithButton question={question}></QuestionWithButton>
 	</div>
 	</div>
 </div>	
