@@ -47,10 +47,10 @@
 <Header links= {links}></Header>
 <div class="container grid-lg">
 	<div class="columns col-oneline p-centerd">
-		<div class="column col-6 cardPadding">
+		<div class="column col-6 cardPadding badge" data-badge="reactive">
 			<QuestionsReactive question={question} defaultResponseMessage={defaultResponseMessage} answers={answers} rightAnswer={rightAnswer}></QuestionsReactive>
 		</div>
-		<div class="column col-6  cardPadding ">
+		<div class="column col-6  cardPadding badge" data-badge="non-reactive">
 			<QuestionWithButton question={question} rightAnswer={rightAnswer} answers={answers} defaultResponseMessage={defaultResponseMessage}></QuestionWithButton>
 		</div>
 	</div>
