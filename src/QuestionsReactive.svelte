@@ -13,9 +13,9 @@
     let selectedAnswer;    
     let answerMessageStatus;
     
-    $: defaultResponseMessage = answers[selectedAnswer] !== undefined   ? 
-                              rightAnswer ==  answers[selectedAnswer].value ? 
-                              `${question.rightAnswerMessage}` : `${question.wrongAnswerMessage}` : defaultResponseMessage ; 
+    // $: defaultResponseMessage = answers[selectedAnswer] !== undefined   ? 
+    //                           rightAnswer ==  answers[selectedAnswer].value ? 
+    //                           `${question.rightAnswerMessage}` : `${question.wrongAnswerMessage}` : defaultResponseMessage ; 
       
 </script>
 
@@ -41,6 +41,12 @@
       </div>
   </div>
   <div class="card-footer">  
-   <span>{defaultResponseMessage}</span> 
+  {#if answers[selectedAnswer] === undefined}
+        <span>{defaultResponseMessage}</span> 
+   {:else if rightAnswer ==  answers[selectedAnswer].value}
+        <span>{question.rightAnswerMessage}</span>
+   {:else}
+        <span>{question.wrongAnswerMessage}</span>
+   {/if}
   </div>  
 </div>
