@@ -1,6 +1,5 @@
 <script>
 
-
     /*
         A more reactive solution. Now we need to break this into even more components and figure out a way to propogate data between them
     */
@@ -41,7 +40,7 @@
       </div>
   </div>
   <div class="card-footer">  
-  {#if answers[selectedAnswer] === undefined}
+   {#if answers[selectedAnswer] === undefined}
         <span>{defaultResponseMessage}</span> 
    {:else if rightAnswer ==  answers[selectedAnswer].value}
         <span>{question.rightAnswerMessage}</span>
