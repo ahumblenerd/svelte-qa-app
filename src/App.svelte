@@ -3,8 +3,7 @@
 	import Header from './Header.svelte';
 	import QuestionWithButton from './QuestionWithButton.svelte';
 	import QuestionsReactive from './QuestionsReactive.svelte';
-	import QuestionsReactiveWithInnerComponents from './QuestionsReactiveWithInnerComponents.svelte';
-	import ReactiveQAWithNestedAnswerAndEvents from './ReactiveQAWithNestedAnswerAndEvents.svelte';
+	import QuestionsReactiveWithInnerComponents from './QuestionsReactiveWithInnerComponents.svelte';	
 	let links = [{
 		url : "http://www.google.com",
 		name : "Google"
