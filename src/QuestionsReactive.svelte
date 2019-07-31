@@ -1,5 +1,4 @@
-<script>
-
+<script>    
     /*
         A more reactive solution. Now we need to break this into even more components and figure out a way to propogate data between them
     */
@@ -27,8 +26,7 @@
     <div class="card-subtitle text-gray">{question.subTitle}</div>
   </div>
   <div class="card-body">
-      <p>{question.body}</p>
-      <div>
+      <p>{question.body}</p>      
         <div class="form-group">
             <select class="form-select" bind:value={selectedAnswer}>
                 <option value="-1">Choose an option</option>
@@ -36,8 +34,7 @@
                     <option value={answer.id}>{answer.value.split("_").join(" ")}</option>
                  {/each}   
             </select>
-        </div>
-      </div>
+        </div>    
   </div>
   <div class="card-footer">  
    {#if answers[selectedAnswer] === undefined}
